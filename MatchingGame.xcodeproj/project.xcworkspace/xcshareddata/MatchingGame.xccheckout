@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2CEA3D52-C181-4BCD-AF85-FE3AC649729F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MatchingGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CF1FB780CC25966DB552753655066B94C00E66FB</key>
+		<string>https://github.com/brl2002/MatchingGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MatchingGame.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CF1FB780CC25966DB552753655066B94C00E66FB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brl2002/MatchingGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CF1FB780CC25966DB552753655066B94C00E66FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CF1FB780CC25966DB552753655066B94C00E66FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MatchingGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

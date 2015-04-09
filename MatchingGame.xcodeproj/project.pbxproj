@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439B294F1AD6F2E8000171D6 /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 439B294E1AD6F2E8000171D6 /* MenuScene.m */; };
+		439B29511AD6F38C000171D6 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 439B29501AD6F38C000171D6 /* MenuScene.sks */; };
 		439E20E11AD328C30020726D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439E20E01AD328C30020726D /* main.m */; };
 		439E20E41AD328C30020726D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439E20E31AD328C30020726D /* AppDelegate.m */; };
 		439E20E71AD328C30020726D /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 439E20E61AD328C30020726D /* GameScene.m */; };
@@ -29,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		439B294D1AD6F258000171D6 /* MenuScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		439B294E1AD6F2E8000171D6 /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
+		439B29501AD6F38C000171D6 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		439E20DB1AD328C30020726D /* MatchingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439E20DF1AD328C30020726D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439E20E01AD328C30020726D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 				439E20F01AD328C30020726D /* Images.xcassets */,
 				439E20F21AD328C30020726D /* LaunchScreen.xib */,
 				439E20DE1AD328C30020726D /* Supporting Files */,
+				439B294D1AD6F258000171D6 /* MenuScene.h */,
+				439B294E1AD6F2E8000171D6 /* MenuScene.m */,
+				439B29501AD6F38C000171D6 /* MenuScene.sks */,
 			);
 			path = MatchingGame;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				439E20F41AD328C30020726D /* LaunchScreen.xib in Resources */,
 				439E20F11AD328C30020726D /* Images.xcassets in Resources */,
 				439E20E91AD328C30020726D /* GameScene.sks in Resources */,
+				439B29511AD6F38C000171D6 /* MenuScene.sks in Resources */,
 				439E20EF1AD328C30020726D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439E20EC1AD328C30020726D /* GameViewController.m in Sources */,
+				439B294F1AD6F2E8000171D6 /* MenuScene.m in Sources */,
 				439E20E41AD328C30020726D /* AppDelegate.m in Sources */,
 				439E20E71AD328C30020726D /* GameScene.m in Sources */,
 				439E20E11AD328C30020726D /* main.m in Sources */,
@@ -424,6 +434,7 @@
 				439E21051AD328C30020726D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		439E21061AD328C30020726D /* Build configuration list for PBXNativeTarget "MatchingGameTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +443,7 @@
 				439E21081AD328C30020726D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
