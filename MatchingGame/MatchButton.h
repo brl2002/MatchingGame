@@ -18,49 +18,25 @@ struct MatchData
     int ID;
 };
 
-enum ButtonState
+typedef enum ButtonState
 {
     CLOSED,
     OPEN,
     MATCHED,
     NOT_MATCHED
-};
+} ButtonState;
 
-@interface MatchButton : Button
+@interface MatchButton : SKSpriteNode
 
 +(struct MatchData)GetNewMatchData;
 
-@property struct MatchData data;
+-(void)SetState:(ButtonState)state;
 
-@property enum ButtonState buttonState;
+-(ButtonState)GetState;
 
-@property SKSpriteNode* matchState;
+-(void)SetTextureForUpState:(SKTexture*)_upState DownState:(SKTexture*)_downState;
 
-@property SKSpriteNode* notMatchState;
-
-@property float timeToWait;
-
-@property float timeLeft;
-
--(id)initWithData:(struct MatchData*)_data;
-
--(struct MatchData) GetMatchData;
-
--(bool)IsMatchWith:(MatchButton*)otherButton;
-
--(enum ButtonState)GetState;
-
--(void)SetMatchState:(SKSpriteNode*)matchState;
-
--(void)SetNotMatchState:(SKSpriteNode*)notMatchState;
-
--(void)ButtonUpdate:(float)deltaTime;
-
--(void)OnMatch;
-
--(void)OnNotMatch;
-
--(void)OnUpState;
+-(void)SetTextureForMatchState:(SKTexture*)_matchState NotMatchState:(SKTexture*)_notMatchState;
 
 @end
 

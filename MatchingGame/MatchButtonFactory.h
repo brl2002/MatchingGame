@@ -18,12 +18,6 @@
 
 +(void)Initialize;
 
-+(MatchButton*)CreateRandomMatchButton;
-
-+(MatchButton*)CopyExistingMatchButton:(MatchButton*)matchButton;
-
-+(int) GetRandomInteger:(int)aStart withEnd:(int)aEnd;
-
 @end
 
 #endif

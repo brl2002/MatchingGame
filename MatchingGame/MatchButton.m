@@ -25,84 +25,57 @@ struct MatchData data;
 
 enum ButtonState buttonState = CLOSED;
 
-SKSpriteNode* matchState = nil;
+SKTexture* upState;
+SKTexture* downState;
+SKTexture* matchState;
+SKTexture* notMatchState;
 
-SKSpriteNode* notMatchState = nil;
-
-float timeToWait = 1.0f;
-
-float timeLeft = 0.0f;
-
--(id)initWithData:(struct MatchData*)_data
+-(void)SetTextureForUpState:(SKTexture*)_upState DownState:(SKTexture*)_downState
 {
-    self = [super init];
+    upState = _upState;
+    downState = _downState;
+}
+
+-(void)SetTextureForMatchState:(SKTexture*)_matchState NotMatchState:(SKTexture*)_notMatchState
+{
+    matchState = _matchState;
+    notMatchState = _notMatchState;
+}
+
+-(void)SetState:(ButtonState)state
+{
+    buttonState = state;
     
-    if (self)
-    {
-        self.data = *_data;
-        timeLeft = timeToWait;
+    switch (buttonState) {
+        case OPEN:
+            if (upState) {
+                self.texture = upState;
+            }
+            break;
+            
+        case CLOSED:
+            if (downState) {
+                self.texture = downState;
+            }
+            break;
+            
+        case MATCHED:
+            if (matchState) {
+                self.texture = matchState;
+            }
+            break;
+            
+        case NOT_MATCHED:
+            if (notMatchState) {
+                self.texture = notMatchState;
+            }
+            break;
     }
-    
-    return self;
 }
 
--(struct MatchData) GetMatchData
-{
-    return data;
-}
-
--(bool)IsMatchWith:(MatchButton*)otherButton
-{
-    return otherButton.data.ID == data.ID;
-}
-
--(enum ButtonState)GetState
+-(ButtonState)GetState
 {
     return buttonState;
-}
-
--(void)SetMatchState:(SKSpriteNode*)matchState
-{
-    self.matchState = matchState;
-}
-
--(void)SetNotMatchState:(SKSpriteNode*)notMatchState
-{
-    self.notMatchState = notMatchState;
-}
-
--(void)ButtonUpdate:(float)deltaTime
-{
-    if (buttonState == NOT_MATCHED || buttonState == MATCHED)
-    {
-        timeLeft -= deltaTime;
-        
-        if (timeLeft <= 0.0f)
-        {
-            
-        }
-    }
-}
-
--(void)OnMatch
-{
-    buttonState = MATCHED;
-}
-
--(void)OnNotMatch
-{
-    buttonState = NOT_MATCHED;
-    timeLeft = timeToWait;
-}
-
--(void)OnUpState
-{
-    if (buttonState == CLOSED)
-    {
-        [super OnDownState];
-        
-        buttonState = OPEN;
-    }
 }
 
 @end

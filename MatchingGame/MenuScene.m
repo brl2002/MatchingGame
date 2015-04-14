@@ -21,14 +21,6 @@
                                    CGRectGetMidY(self.frame) * 1.7);
     
     [self addChild:myLabel];
-    
-//    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"match_item1"];
-//    
-//    sprite.xScale = 0.5;
-//    sprite.yScale = 0.5;
-//    sprite.position = CGPointMake(500, 500);
-//    
-//    [self addChild:sprite];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

@@ -14,37 +14,24 @@
 
 #import "MatchButtonFactory.h"
 
-enum GameState
+typedef enum GameState
 {
     READY,
     RUNNING,
     PAUSED,
     GAMEOVER
-};
+} GameState;
+
+typedef enum CheckState
+{
+    IDLE,
+    CHECK,
+    CHECK_WAIT
+} CheckState;
 
 @interface GameScene : SKScene
 
-@property enum GameState state;
 
-@property int oldScore;
-
-@property NSMutableString* score;
-
-@property bool showButtons;
-
-@property float _timeLeft;
-
-@property float gameTime;
-
-@property float gameTimeLeft;
-
-@property NSMutableArray* matchButton;
-
-@property NSMutableArray* matchList;
-
-@property MatchButton* firstSelection;
-
-@property MatchButton* secondSelection;
 
 @end
 

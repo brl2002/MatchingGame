@@ -39,41 +39,4 @@ static NSMutableArray* buttonImages;
     [buttonImages addObject:[SKSpriteNode spriteNodeWithImageNamed:@"match_item20"]]; // Image 20
 }
 
-+(MatchButton*)CreateRandomMatchButton
-{
-    int rand = arc4random_uniform(19);
-    
-    struct MatchData data;
-    data.ID = rand;
-    MatchButton* button = [[MatchButton alloc]initWithData:&data];
-    
-    [button SetUpState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_circle"]];
-    [button SetMatchState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_checkmark"]];
-    [button SetNotMatchState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_cross"]];
-    [button SetDownState:buttonImages[rand]];
-    
-    return button;
-}
-
-+(MatchButton*)CopyExistingMatchButton:(MatchButton*)matchButton
-{
-    int rand = matchButton.GetMatchData.ID;
-    
-    struct MatchData data;
-    data.ID = rand;
-    MatchButton* button = [[MatchButton alloc]initWithData:&data];
-    
-    [button SetUpState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_circle"]];
-    [button SetMatchState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_checkmark"]];
-    [button SetNotMatchState:[SKSpriteNode spriteNodeWithImageNamed:@"blue_cross"]];
-    [button SetDownState:buttonImages[rand]];
-    
-    return button;
-}
-
-+(int) GetRandomInteger:(int)aStart withEnd:(int)aEnd
-{
-    return aStart + (arc4random() * aEnd);
-}
-
 @end
