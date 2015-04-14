@@ -18,6 +18,11 @@
 		439E20F11AD328C30020726D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439E20F01AD328C30020726D /* Images.xcassets */; };
 		439E20F41AD328C30020726D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 439E20F21AD328C30020726D /* LaunchScreen.xib */; };
 		439E21001AD328C30020726D /* MatchingGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 439E20FF1AD328C30020726D /* MatchingGameTests.m */; };
+		7F1F48181ADC82D5008C7838 /* MatchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F48171ADC82D5008C7838 /* MatchButton.m */; };
+		7F1F481B1ADCDB5D008C7838 /* Button.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F481A1ADCDB5D008C7838 /* Button.m */; };
+		7F1F481E1ADD2CBD008C7838 /* Input.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F481D1ADD2CBD008C7838 /* Input.m */; };
+		7F1F48211ADD3AD7008C7838 /* MatchButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */; };
+		7F1F48241ADD4954008C7838 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F48231ADD4954008C7838 /* GameOverScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,16 @@
 		439E20F91AD328C30020726D /* MatchingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchingGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439E20FE1AD328C30020726D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439E20FF1AD328C30020726D /* MatchingGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchingGameTests.m; sourceTree = "<group>"; };
+		7F1F48161ADC82C4008C7838 /* MatchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchButton.h; sourceTree = "<group>"; };
+		7F1F48171ADC82D5008C7838 /* MatchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchButton.m; sourceTree = "<group>"; };
+		7F1F48191ADCDAFB008C7838 /* Button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Button.h; sourceTree = "<group>"; };
+		7F1F481A1ADCDB5D008C7838 /* Button.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Button.m; sourceTree = "<group>"; };
+		7F1F481C1ADD2CAF008C7838 /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		7F1F481D1ADD2CBD008C7838 /* Input.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Input.m; sourceTree = "<group>"; };
+		7F1F481F1ADD3AC9008C7838 /* MatchButtonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchButtonFactory.h; sourceTree = "<group>"; };
+		7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchButtonFactory.m; sourceTree = "<group>"; };
+		7F1F48221ADD4945008C7838 /* GameOverScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		7F1F48231ADD4954008C7838 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,16 @@
 				439B294D1AD6F258000171D6 /* MenuScene.h */,
 				439B294E1AD6F2E8000171D6 /* MenuScene.m */,
 				439B29501AD6F38C000171D6 /* MenuScene.sks */,
+				7F1F48161ADC82C4008C7838 /* MatchButton.h */,
+				7F1F48171ADC82D5008C7838 /* MatchButton.m */,
+				7F1F48191ADCDAFB008C7838 /* Button.h */,
+				7F1F481A1ADCDB5D008C7838 /* Button.m */,
+				7F1F481C1ADD2CAF008C7838 /* Input.h */,
+				7F1F481D1ADD2CBD008C7838 /* Input.m */,
+				7F1F481F1ADD3AC9008C7838 /* MatchButtonFactory.h */,
+				7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */,
+				7F1F48221ADD4945008C7838 /* GameOverScene.h */,
+				7F1F48231ADD4954008C7838 /* GameOverScene.m */,
 			);
 			path = MatchingGame;
 			sourceTree = "<group>";
@@ -237,9 +262,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F1F48241ADD4954008C7838 /* GameOverScene.m in Sources */,
+				7F1F48211ADD3AD7008C7838 /* MatchButtonFactory.m in Sources */,
 				439E20EC1AD328C30020726D /* GameViewController.m in Sources */,
+				7F1F481B1ADCDB5D008C7838 /* Button.m in Sources */,
+				7F1F481E1ADD2CBD008C7838 /* Input.m in Sources */,
 				439B294F1AD6F2E8000171D6 /* MenuScene.m in Sources */,
 				439E20E41AD328C30020726D /* AppDelegate.m in Sources */,
+				7F1F48181ADC82D5008C7838 /* MatchButton.m in Sources */,
 				439E20E71AD328C30020726D /* GameScene.m in Sources */,
 				439E20E11AD328C30020726D /* main.m in Sources */,
 			);
@@ -366,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MatchingGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -376,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MatchingGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
