@@ -10,15 +10,15 @@
 
 @implementation Button
 
-int x = 0;
+@synthesize x;
 
-int y = 0;
+@synthesize y;
 
-SKSpriteNode* currentState = nil;
+@synthesize currentState;
 
-SKSpriteNode* downState = nil;
+@synthesize downState;
 
-SKSpriteNode* upState = nil;
+@synthesize upState;
 
 -(void)SetDownState:(SKSpriteNode*)downStateImage
 {
@@ -59,6 +59,8 @@ SKSpriteNode* upState = nil;
     if (currentState != nil)
     {
         [scene addChild:currentState];
+        
+        currentState.position = CGPointMake(500, 500);
     }
 }
 

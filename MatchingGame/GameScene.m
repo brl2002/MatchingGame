@@ -81,6 +81,9 @@ MatchButton* secondSelection = nil;
                 matchButton.y = 50 * row + startY;
                 
                 [matchButtons addObject:matchButton];
+                
+                //[matchButton DrawButton:self];
+                [self addChild:matchButton.upState];
             }
         }
     }
@@ -97,7 +100,7 @@ MatchButton* secondSelection = nil;
     {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"strawberry_content_fruit"];
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"match_item1"];
         
         sprite.xScale = 0.5;
         sprite.yScale = 0.5;
