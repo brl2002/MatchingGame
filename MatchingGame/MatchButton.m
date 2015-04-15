@@ -49,13 +49,13 @@ SKTexture* notMatchState;
     switch (buttonState) {
         case OPEN:
             if (upState) {
-                self.texture = upState;
+                self.texture = downState;
             }
             break;
             
         case CLOSED:
             if (downState) {
-                self.texture = downState;
+                self.texture = upState;
             }
             break;
             
