@@ -36,6 +36,10 @@ CFTimeInterval _lastTime = 0;
 
 int score;
 
+SKAction* updateLabelAndWait;
+
+bool gameOver = false;
+
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     
@@ -55,7 +59,7 @@ int score;
     }];
     
     SKAction* wait = [SKAction waitForDuration:1.0];
-    SKAction* updateLabelAndWait = [SKAction sequence:@[updateLabel, wait]];
+    updateLabelAndWait = [SKAction sequence:@[updateLabel, wait]];
     [self runAction:[SKAction repeatAction:updateLabelAndWait count:gameTime] completion:^{
         timeLabel.text = @"GAME OVER";
         state = GAMEOVER;
@@ -166,6 +170,7 @@ int score;
             for (MatchButton* button in matchButtonContainer)
             {
                 if ([node.name isEqualToString:button.name] &&
+                    selectedButton1 != button &&
                     checkState == IDLE &&
                     (button.GetState == CLOSED || button.GetState != MATCHED))
                 {
@@ -176,6 +181,42 @@ int score;
             break;
             
         case GAMEOVER:
+            if (!gameOver)
+            {
+                SKSpriteNode* backButton = [SKSpriteNode spriteNodeWithImageNamed:@"blue_sliderLeft"];
+                backButton.xScale = 2;
+                backButton.yScale = 2;
+                backButton.position = CGPointMake(self.frame.size.width * 0.2f, self.frame.size.height * 0.88f);
+                backButton.size = CGSizeMake(self.frame.size.width * 0.2f, 40);
+                backButton.name = @"BackButton";
+                [self addChild:backButton];
+                
+                SKLabelNode* gameOverLabel = [SKLabelNode labelNodeWithFontNamed:@"AppleSDGothicNeo-Regular "];
+                
+                gameOverLabel.text = @"YOU WON!";
+                gameOverLabel.fontSize = 50;
+                gameOverLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+                gameOverLabel.fontColor = [SKColor whiteColor];
+                gameOverLabel.position = CGPointMake(self.frame.size.width * 0.3f, self.frame.size.height * 0.5f);
+                gameOverLabel.zPosition = 1;
+                gameOverLabel.color = [SKColor redColor];
+                [self addChild:gameOverLabel];
+                
+                SKLabelNode* gameOverLabel2 = [SKLabelNode labelNodeWithFontNamed:@"AppleSDGothicNeo-Regular "];
+                
+                gameOverLabel2.text = @"TOUCH THE SLIDER TOP TO GO BACK";
+                gameOverLabel2.fontSize = 50;
+                gameOverLabel2.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+                gameOverLabel2.fontColor = [SKColor whiteColor];
+                gameOverLabel2.position = CGPointMake(self.frame.size.width * 0.05f, self.frame.size.height * 0.3f);
+                gameOverLabel2.color = [SKColor redColor];
+                [self addChild:gameOverLabel2];
+                
+                [self removeAllActions];
+                
+                gameOver = true;
+            }
+            
             if ([node.name isEqualToString:@"BackButton"])
             {
                 MenuScene *menuScene = [[MenuScene alloc] initWithSize:self.size];
