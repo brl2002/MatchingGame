@@ -32,7 +32,6 @@ typedef enum CheckState
 @interface GameScene : SKScene
 
 
-
 @end
 
 #endif

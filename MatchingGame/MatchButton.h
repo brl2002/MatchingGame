@@ -13,10 +13,10 @@
 
 #import "Button.h"
 
-struct MatchData
+typedef struct MatchData
 {
     int ID;
-};
+} MatchData;
 
 typedef enum ButtonState
 {
@@ -27,16 +27,40 @@ typedef enum ButtonState
 } ButtonState;
 
 @interface MatchButton : SKSpriteNode
+{
+    MatchData data;
+    
+    ButtonState buttonState;
+    
+    NSString* upState;
+    NSString* downState;
+    NSString* matchState;
+    NSString* notMatchState;
+}
 
-+(struct MatchData)GetNewMatchData;
+-(bool)IsMatchWith:(MatchButton*)button;
+
+-(void)CopyMatchButton:(MatchButton*)button;
+
+-(void)SetData:(MatchData*)_data;
+
+-(MatchData)GetData;
+
+-(NSString*)GetUpState;
+
+-(NSString*)GetDownState;
+
+-(NSString*)GetMatchState;
+
+-(NSString*)GetNotMatchState;
 
 -(void)SetState:(ButtonState)state;
 
 -(ButtonState)GetState;
 
--(void)SetTextureForUpState:(SKTexture*)_upState DownState:(SKTexture*)_downState;
+-(void)SetTextureForUpState:(NSString*)_upState DownState:(NSString*)_downState;
 
--(void)SetTextureForMatchState:(SKTexture*)_matchState NotMatchState:(SKTexture*)_notMatchState;
+-(void)SetTextureForMatchState:(NSString*)_matchState NotMatchState:(NSString*)_notMatchState;
 
 @end
 

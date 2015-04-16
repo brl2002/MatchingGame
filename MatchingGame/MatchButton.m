@@ -12,31 +12,71 @@
 
 @implementation MatchButton
 
-static int lastAssignedID;
+MatchData data;
 
-+(struct MatchData) GetNewMatchData
+ButtonState buttonState = CLOSED;
+
+NSString* upState = nil;
+NSString* downState = nil;
+NSString* matchState = nil;
+NSString* notMatchState = nil;
+
+-(bool)IsMatchWith:(MatchButton*)button
 {
-    struct MatchData newData;
-    newData.ID++;
-    return newData;
+    if (data.ID == button.GetData.ID)
+    {
+        return true;
+    }
+    
+    return false;
 }
 
-struct MatchData data;
+-(void)CopyMatchButton:(MatchButton*)button
+{
+    data.ID = button.GetData.ID;
+    upState = button.GetUpState;
+    downState = button.GetDownState;
+    matchState = button.GetMatchState;
+    notMatchState = button.GetNotMatchState;
+}
 
-enum ButtonState buttonState = CLOSED;
+-(void)SetData:(MatchData*)_data
+{
+    data.ID = _data->ID;
+}
 
-SKTexture* upState;
-SKTexture* downState;
-SKTexture* matchState;
-SKTexture* notMatchState;
+-(MatchData)GetData
+{
+    return data;
+}
 
--(void)SetTextureForUpState:(SKTexture*)_upState DownState:(SKTexture*)_downState
+-(NSString*)GetUpState
+{
+    return [upState copy];
+}
+
+-(NSString*)GetDownState
+{
+    return [downState copy];
+}
+
+-(NSString*)GetMatchState
+{
+    return [matchState copy];
+}
+
+-(NSString*)GetNotMatchState
+{
+    return [notMatchState copy];
+}
+
+-(void)SetTextureForUpState:(NSString*)_upState DownState:(NSString*)_downState
 {
     upState = _upState;
     downState = _downState;
 }
 
--(void)SetTextureForMatchState:(SKTexture*)_matchState NotMatchState:(SKTexture*)_notMatchState
+-(void)SetTextureForMatchState:(NSString*)_matchState NotMatchState:(NSString*)_notMatchState
 {
     matchState = _matchState;
     notMatchState = _notMatchState;
@@ -48,26 +88,26 @@ SKTexture* notMatchState;
     
     switch (buttonState) {
         case OPEN:
-            if (upState) {
-                self.texture = downState;
+            if (downState) {
+                self.texture = [SKTexture textureWithImageNamed:downState];
             }
             break;
             
         case CLOSED:
-            if (downState) {
-                self.texture = upState;
+            if (upState) {
+                self.texture = [SKTexture textureWithImageNamed:upState];
             }
             break;
             
         case MATCHED:
             if (matchState) {
-                self.texture = matchState;
+                self.texture = [SKTexture textureWithImageNamed:matchState];
             }
             break;
             
         case NOT_MATCHED:
             if (notMatchState) {
-                self.texture = notMatchState;
+                self.texture = [SKTexture textureWithImageNamed:notMatchState];
             }
             break;
     }

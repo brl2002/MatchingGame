@@ -23,6 +23,7 @@
 		7F1F481E1ADD2CBD008C7838 /* Input.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F481D1ADD2CBD008C7838 /* Input.m */; };
 		7F1F48211ADD3AD7008C7838 /* MatchButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */; };
 		7F1F48241ADD4954008C7838 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1F48231ADD4954008C7838 /* GameOverScene.m */; };
+		7FB9E1DE1ADFF02A00FFA35F /* HelpScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB9E1DD1ADFF02A00FFA35F /* HelpScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchButtonFactory.m; sourceTree = "<group>"; };
 		7F1F48221ADD4945008C7838 /* GameOverScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		7F1F48231ADD4954008C7838 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
+		7FB9E1DC1ADFF01700FFA35F /* HelpScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpScene.h; sourceTree = "<group>"; };
+		7FB9E1DD1ADFF02A00FFA35F /* HelpScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				7F1F48201ADD3AD7008C7838 /* MatchButtonFactory.m */,
 				7F1F48221ADD4945008C7838 /* GameOverScene.h */,
 				7F1F48231ADD4954008C7838 /* GameOverScene.m */,
+				7FB9E1DC1ADFF01700FFA35F /* HelpScene.h */,
+				7FB9E1DD1ADFF02A00FFA35F /* HelpScene.m */,
 			);
 			path = MatchingGame;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				7F1F48181ADC82D5008C7838 /* MatchButton.m in Sources */,
 				439E20E71AD328C30020726D /* GameScene.m in Sources */,
 				439E20E11AD328C30020726D /* main.m in Sources */,
+				7FB9E1DE1ADFF02A00FFA35F /* HelpScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,9 @@
 
 @interface MatchButtonFactory : NSObject
 
-+(void)Initialize;
+-(void)Initialize;
+
+-(MatchButton*)CreateMatchButton;
 
 @end
 
